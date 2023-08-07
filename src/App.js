@@ -1,25 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Siding from './Siding';
+import { useState } from 'react';
+import Note from './Note';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const [notes,setNotes]=useState('notes');
 
-export default App;
+  const Addnotes =()=>{
+    console.log("ajith");
+    const newNote={
+      id:id(),
+      title:"notes",
+      body:" ",
+      lastModified:Date.now(),
+    }
+  };
+return(
+  <div className='header'>
+    Notes taking Application
+    <Note/>
+    <Siding/>
+  </div>
+)
+}
+export default App
